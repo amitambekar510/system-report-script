@@ -33,6 +33,9 @@ You can change this path in the `REPORT_DIR` variable.
    chmod +x system_report.sh
 
 2. Run the script:
+   
 ./system_report.sh
 
-3. View reports in /tmp/system_reports/
+3. View reports in
+
+/tmp/system_reports/
