@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-06T00:00:00+00:00",
+  "host": "demo-linux-01 (synthetic)",
+  "demo": true,
+  "sections": [
+    {"title":"CPU","status":"ok","text":"Architecture: x86_64\nCPU(s): 8\nIllustrative values only."},
+    {"title":"Memory","status":"ok","text":"Memory: 16 GiB total / 6 GiB used / 10 GiB available\nIllustrative values only."},
+    {"title":"Filesystems","status":"ok","text":"Filesystem   Size   Used   Available   Mount\n/dev/demo    200G    80G    120G        /\nIllustrative values only."},
+    {"title":"Account status: analyst","status":"unavailable","text":"Command failed or permission denied."},
+    {"title":"SSH MFA configuration hint","status":"review","text":"A known MFA module reference was found. This does not establish MFA enforcement. Review effective SSH and PAM configuration."}
+  ],
+  "benchmarks": []
+}
