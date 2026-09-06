@@ -1,0 +1,18 @@
+name: Validate system report
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Validate Bash entry point
+        run: bash -n system_check_and_fio.sh
+      - name: Test report generation and benchmark failures
+        run: python3 -m unittest discover -s tests -v
+      - name: Generate synthetic demo reports
+        run: bash system_check_and_fio.sh --demo
