@@ -1,4 +1,57 @@
-# Linux System Report
+<div align="center">
+
+<img src="assets/system-v2-hero.svg" width="100%" alt="System Report Script 2.0 — AI-guided Linux reporting">
+
+# System Report Script 2.0
+
+**AI-guided Linux intake · Safe system evidence · SOC handovers · Audit-ready report exports**
+
+<img src="assets/system-v2-workflow.gif" width="100%" alt="Synthetic five-stage workflow animation">
+
+*Illustrative workflow. No host inspection or FIO load is performed in this animation.*
+
+<img src="assets/system-v2-architecture.svg" width="100%" alt="Infrastructure intake, approved collection, review and export architecture">
+
+</div>
+
+## 🤖 AI-ready setup for your Linux environment
+
+Paste the following into an AI assistant that supports reading GitHub repositories:
+
+```text
+Read AGENTS.md and AI_INSTRUCTIONS.md from this repository.
+Ask me one question at a time, starting with my Linux distribution.
+Learn the number of hosts, reporting purpose, permitted access,
+required evidence, data sensitivity, and whether FIO benchmarking is
+approved. Prepare a safe environment-specific execution plan and
+audit evidence checklist. Never request credentials or assume
+benchmarking is permitted.
+```
+
+Pasting a repository URL alone does **not** guarantee every AI assistant reads its instructions. This is a guided planning workflow, not an embedded chatbot.
+
+### Offline environment plan — no host inspection
+
+```bash
+python3 scripts/plan_report.py --input examples/environment.sample.json --output /tmp/system-report-plan.md
+```
+
+### Synthetic sample report — no host inspection
+
+```bash
+bash system_check_and_fio.sh --demo
+```
+
+The existing Linux inventory and report exports remain available. **FIO benchmarking remains off by default** and requires explicit authorization.
+
+### Compliance and audit context
+
+See the [12-reference applicability matrix](docs/compliance-applicability.md). This tool supports selected evidence gathering; it does not certify compliance or replace continuous monitoring, vulnerability assessment or manual SSH MFA verification.
+
+---
+
+## Existing Linux reporting guide
+
 
 **A clear system snapshot for SOC handovers, server reviews and troubleshooting.** Collect Linux hardware and account information, review SSH MFA configuration hints, and optionally measure disk I/O with FIO.
 
