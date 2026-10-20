@@ -1,0 +1,19 @@
+{
+  "operating_system": "Ubuntu Linux (synthetic example)",
+  "host_count": 3,
+  "purpose": "SOC handover and audit evidence",
+  "access": "non-root",
+  "sections": [
+    "CPU",
+    "Memory",
+    "Filesystems",
+    "Account inventory",
+    "SSH MFA hint"
+  ],
+  "benchmark_approved": false,
+  "output_classification": "internal restricted",
+  "frameworks": [
+    "ISO/IEC 27001",
+    "NIST CSF 2.0"
+  ]
+}
